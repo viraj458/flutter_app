@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/about.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatelessWidget {
   static const routeName = "/home";
@@ -33,9 +34,11 @@ class Home extends StatelessWidget {
               'ආයුබෝවන්!!!',
               style: TextStyle(fontSize: 40),
             ),
-            const Text(
+            Text(
               'Hello',
-              style: TextStyle(fontSize: 12),
+              style: GoogleFonts.courgette(
+                fontSize: 20,
+              ),
             ),
             ElevatedButton(
                 onPressed: () async {
@@ -43,13 +46,18 @@ class Home extends StatelessWidget {
                       About.routeName,
                       arguments: AboutArguments(name: "Devs")) as String;
 
+                  // ignore: avoid_print
                   print(text);
                 },
-                child: Row(
-                  children: [
-                    Icon(Icons.adb_rounded),
-                    Text("About"),
-                  ],
+                child: SizedBox(
+                  width: 60,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Icon(Icons.adb_rounded),
+                      Text("About"),
+                    ],
+                  ),
                 ))
           ],
         ),

@@ -15,20 +15,18 @@ class About extends StatelessWidget {
         ModalRoute.of(context)?.settings.arguments as AboutArguments;
     return Scaffold(
       appBar: AppBar(title: Text('About ${args.name}')),
-      body: Container(
-        child: Column(
-          children: [
-            Text(
-              'About ${args.name}',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            OutlinedButton(
-                onPressed: () {
-                  Navigator.of(context).pop('From about');
-                },
-                child: Text("Home"))
-          ],
-        ),
+      body: Column(
+        children: [
+          Text(
+            'About ${args.name}',
+            style: Theme.of(context).textTheme.headline4,
+          ),
+          OutlinedButton(
+              onPressed: () {
+                Navigator.of(context).pop('From about');
+              },
+              child: const Text("Home"))
+        ],
       ),
     );
   }
