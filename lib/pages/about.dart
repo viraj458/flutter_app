@@ -25,7 +25,7 @@ class About extends StatelessWidget {
             ),
             OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  Navigator.of(context).pop('From about');
                 },
                 child: Text("Home"))
           ],

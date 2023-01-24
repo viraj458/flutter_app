@@ -30,9 +30,12 @@ class Home extends StatelessWidget {
               style: TextStyle(fontSize: 12),
             ),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed(About.routeName,
-                      arguments: AboutArguments(name: "Devs"));
+                onPressed: () async {
+                  String text = await Navigator.of(context).pushNamed(
+                      About.routeName,
+                      arguments: AboutArguments(name: "Devs")) as String;
+
+                  print(text);
                 },
                 child: const Text("About"))
           ],
