@@ -31,7 +31,8 @@ class Home extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed(About.routeName);
+                  Navigator.of(context).pushNamed(About.routeName,
+                      arguments: AboutArguments(name: "Devs"));
                 },
                 child: const Text("About"))
           ],
