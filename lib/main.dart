@@ -1,9 +1,9 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/home.dart';
+import 'package:flutter_app/pages/routes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,32 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.yellow),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter'),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              SizedBox(
-                width: double.infinity,
-              ),
-              Text(
-                'Helloww',
-                style: TextStyle(fontSize: 24),
-              ),
-              Text(
-                'Helloww',
-                style: TextStyle(fontSize: 24),
-              )
-            ],
-          ),
-        ),
-      ),
+      initialRoute: Home.routeName,
+      routes: routes,
     );
   }
 }
