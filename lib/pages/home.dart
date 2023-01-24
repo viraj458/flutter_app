@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
         title: const Text('Flutter'),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,9 +21,17 @@ class Home extends StatelessWidget {
             const SizedBox(
               width: double.infinity,
             ),
+            Image.asset(
+              "assets/images/istockphoto-1266386917-612x612.jpg",
+              scale: 5,
+            ),
+            Image.network(
+              "https://images.unsplash.com/photo-1556761223-4c4282c73f77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFzdGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+              scale: 3,
+            ),
             const Text(
-              'Helloww',
-              style: TextStyle(fontSize: 24),
+              'ආයුබෝවන්!!!',
+              style: TextStyle(fontSize: 40),
             ),
             const Text(
               'Hello',
@@ -37,7 +45,12 @@ class Home extends StatelessWidget {
 
                   print(text);
                 },
-                child: const Text("About"))
+                child: Row(
+                  children: [
+                    Icon(Icons.adb_rounded),
+                    Text("About"),
+                  ],
+                ))
           ],
         ),
       ),

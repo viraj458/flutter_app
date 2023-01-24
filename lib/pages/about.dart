@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/home.dart';
 
 class AboutArguments {
   final String name;
