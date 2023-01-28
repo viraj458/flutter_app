@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       theme: MyTheme.lightTheme,
       darkTheme: MyTheme.darkTheme,
       themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
-      initialRoute: Home.routeName,
+      // initialRoute: Home.routeName,
       routes: routes,
       home: Home(
         isDark: isDark,
