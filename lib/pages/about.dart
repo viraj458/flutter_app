@@ -1,13 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AboutArguments {
   final String name;
   AboutArguments({required this.name});
 }
 
-class About extends StatelessWidget {
+class About extends StatefulWidget {
   static const routeName = "/about";
   const About({super.key});
+
+  @override
+  State<About> createState() => _AboutState();
+}
+
+class _AboutState extends State<About> {
+  int count = 0;
+
+  void onIncrement() {
+    setState(() {
+      count++;
+    });
+  }
+
+  void onDecrement() {
+    setState(() {
+      count--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +46,18 @@ class About extends StatelessWidget {
             Text(
               'About ${args.name}',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            OutlinedButton(
+              onPressed: onIncrement,
+              child: Icon(Icons.add),
+            ),
+            Text(
+              'The count is: $count',
+              style: GoogleFonts.chilanka(fontSize: 20),
+            ),
+            OutlinedButton(
+              onPressed: onDecrement,
+              child: Icon(Icons.remove),
             ),
             OutlinedButton(
                 onPressed: () {
