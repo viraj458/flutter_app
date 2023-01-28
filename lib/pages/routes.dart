@@ -4,5 +4,5 @@ import 'package:flutter_app/pages/home.dart';
 
 final Map<String, WidgetBuilder> routes = {
   Home.routeName:(_) => const Home(),
-  About.routeName:(_) => const About(),
+  About.routeName: (_) => const About(),
 };

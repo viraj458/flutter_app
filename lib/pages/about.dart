@@ -67,10 +67,6 @@ class _AboutState extends State<About> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: null,
-      ),
     );
   }
 }

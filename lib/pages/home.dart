@@ -4,13 +4,16 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatelessWidget {
   static const routeName = "/home";
-  const Home({super.key});
+  final Function(bool)? toggleDarkMode;
+  final bool? isDark;
+  const Home({super.key, this.toggleDarkMode, this.isDark});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter'),
+        actions: [Switch(value: isDark ?? false, onChanged: toggleDarkMode)],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
